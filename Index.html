@@ -4,35 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0715">
-
-  <meta name="description"
-        content="Sadiqctr — Web3 community moderator focused on Telegram, Discord, community safety and engagement.">
-
-  <title>Sadiqctr | Web3 Community Moderator</title>
+  <meta name="description" content="Web3 community moderation, Telegram and Discord support, member engagement, and community safety.">
+  <title>Web3 Community Moderator | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #0b0715;
       --panel: #151022;
-      --panel-light: #1d1530;
+      --panel2: #1c1430;
       --purple: #a855f7;
       --pink: #e879f9;
-      --text: #f8f5ff;
-      --muted: #b6abc9;
-      --border: rgba(192, 132, 252, 0.19);
-      --green: #86efac;
+      --white: #f8f5ff;
+      --muted: #b8aecb;
+      --border: rgba(192,132,252,.2);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -42,13 +36,12 @@
 
     body {
       background:
-        radial-gradient(ellipse at 15% 5%, rgba(126, 34, 206, 0.18), transparent 35%),
-        radial-gradient(ellipse at 90% 40%, rgba(147, 51, 234, 0.10), transparent 35%),
+        radial-gradient(ellipse at 15% 5%, rgba(126,34,206,.16), transparent 36%),
+        radial-gradient(ellipse at 90% 45%, rgba(147,51,234,.09), transparent 34%),
         var(--bg);
-      color: var(--text);
+      color: var(--white);
       font-family: "DM Sans", sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
+      line-height: 1.75;
     }
 
     a {
@@ -56,36 +49,30 @@
       text-decoration: none;
     }
 
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     .container {
-      width: min(1100px, 90%);
+      width: min(1080px, 90%);
       margin: auto;
     }
 
     .navbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(11, 7, 21, 0.91);
-      backdrop-filter: blur(16px);
+      z-index: 10;
+      background: rgba(11,7,21,.92);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
-      min-height: 76px;
+      min-height: 74px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .logo {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 25px;
-      font-weight: 700;
+      font: 700 25px "Space Grotesk", sans-serif;
       letter-spacing: -1px;
     }
 
@@ -96,13 +83,13 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 23px;
       flex-wrap: wrap;
     }
 
     .nav-links a {
-      font-size: 13px;
       color: var(--muted);
+      font-size: 13px;
       transition: color .2s;
     }
 
@@ -110,15 +97,15 @@
       color: var(--pink);
     }
 
-    .nav-cta {
-      padding: 10px 17px;
+    .nav-links .nav-button {
+      padding: 9px 14px;
       border: 1px solid var(--border);
-      border-radius: 10px;
-      color: white !important;
+      border-radius: 9px;
+      color: var(--white);
     }
 
     .hero {
-      min-height: 650px;
+      min-height: 610px;
       display: grid;
       grid-template-columns: 1.2fr .8fr;
       align-items: center;
@@ -127,153 +114,134 @@
       padding-bottom: 75px;
     }
 
-    .eyebrow {
+    .badge {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: #e9c7ff;
+      gap: 9px;
       border: 1px solid var(--border);
-      background: rgba(168, 85, 247, .08);
-      border-radius: 100px;
-      padding: 8px 14px;
+      background: rgba(168,85,247,.08);
+      border-radius: 50px;
+      padding: 7px 13px;
+      color: #e9d5ff;
       font-size: 12px;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
+    .badge-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 12px var(--green);
+      background: #86efac;
+      box-shadow: 0 0 10px #86efac;
     }
 
     h1, h2, h3 {
       font-family: "Space Grotesk", sans-serif;
-      line-height: 1.15;
+      line-height: 1.2;
     }
 
     h1 {
-      font-size: clamp(46px, 7vw, 76px);
-      letter-spacing: -3px;
+      font-size: clamp(43px, 6.5vw, 72px);
+      letter-spacing: -2.7px;
       margin-bottom: 22px;
     }
 
-    .gradient-text {
-      background: linear-gradient(110deg, #c084fc, #f0abfc, #a78bfa);
-      -webkit-background-clip: text;
+    .gradient {
+      color: #d8a5ff;
+      background: linear-gradient(100deg, #c084fc, #f0abfc, #a78bfa);
       background-clip: text;
-      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hero-description {
-      max-width: 570px;
+    .hero-text {
       color: var(--muted);
-      font-size: 16px;
-      margin-bottom: 30px;
+      max-width: 550px;
+      font-size: 15px;
+      margin-bottom: 28px;
     }
 
     .button-row {
       display: flex;
-      gap: 13px;
       flex-wrap: wrap;
+      gap: 12px;
     }
 
     .button {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      padding: 13px 20px;
-      border-radius: 11px;
+      align-items: center;
+      padding: 12px 19px;
+      border-radius: 10px;
+      font-size: 13px;
       font-weight: 700;
-      font-size: 14px;
       transition: transform .2s, box-shadow .2s;
-      cursor: pointer;
     }
 
     .button:hover {
       transform: translateY(-3px);
     }
 
-    .button-primary {
+    .primary {
       background: linear-gradient(110deg, #9333ea, #c026d3);
-      box-shadow: 0 8px 28px rgba(168, 85, 247, .23);
       color: white;
-      border: 0;
+      box-shadow: 0 7px 25px rgba(168,85,247,.22);
     }
 
-    .button-secondary {
+    .secondary {
       border: 1px solid var(--border);
       background: rgba(255,255,255,.025);
     }
 
     .hero-note {
-      color: #9185a5;
+      margin-top: 22px;
+      color: #9386a8;
       font-size: 12px;
-      margin-top: 23px;
     }
 
     .profile-card {
-      position: relative;
-      padding: 30px;
-      border: 1px solid rgba(192,132,252,.3);
-      border-radius: 25px;
-      background: linear-gradient(145deg, rgba(39, 23, 60, .9), rgba(17, 12, 30, .96));
-      box-shadow: 0 0 70px rgba(147, 51, 234, .12);
-      overflow: hidden;
+      padding: 28px;
+      border: 1px solid rgba(192,132,252,.28);
+      border-radius: 22px;
+      background: linear-gradient(145deg, #201530, #110c1e);
+      box-shadow: 0 0 55px rgba(147,51,234,.1);
     }
 
-    .profile-card::before {
-      content: "";
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: rgba(168, 85, 247, .14);
-      filter: blur(45px);
-      top: -90px;
-      right: -60px;
-    }
-
-    .avatar {
-      width: 94px;
-      height: 94px;
+    .profile-symbol {
+      width: 76px;
+      height: 76px;
       display: grid;
       place-items: center;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 34px;
-      font-weight: 700;
-      border-radius: 25px;
+      border-radius: 20px;
       background: linear-gradient(135deg, #9333ea, #e879f9);
-      box-shadow: 0 0 35px rgba(192,132,252,.25);
-      margin-bottom: 24px;
-      position: relative;
+      box-shadow: 0 0 30px rgba(192,132,252,.22);
+      font: 700 27px "Space Grotesk", sans-serif;
+      margin-bottom: 22px;
     }
 
     .profile-card h2 {
-      font-size: 27px;
+      font-size: 24px;
       margin-bottom: 7px;
-      position: relative;
     }
 
     .profile-role {
       color: #d8b4fe;
-      font-size: 14px;
-      margin-bottom: 25px;
+      font-size: 13px;
+      margin-bottom: 22px;
     }
 
-    .profile-divider {
+    .divider {
       border: 0;
       border-top: 1px solid var(--border);
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .profile-line {
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      margin: 13px 0;
-      font-size: 13px;
+      margin: 12px 0;
+      font-size: 12px;
     }
 
     .profile-line span:first-child {
@@ -282,89 +250,83 @@
 
     .profile-line span:last-child {
       text-align: right;
-      overflow-wrap: anywhere;
     }
 
     .section {
-      padding: 100px 0;
+      padding: 85px 0;
       border-top: 1px solid rgba(192,132,252,.09);
     }
 
     .section-heading {
-      max-width: 650px;
-      margin-bottom: 42px;
+      max-width: 670px;
+      margin-bottom: 34px;
     }
 
     .section-label {
       color: var(--pink);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     .section-heading h2 {
-      font-size: clamp(32px, 5vw, 46px);
-      letter-spacing: -1.5px;
-      margin-bottom: 17px;
+      font-size: clamp(31px, 4.5vw, 43px);
+      letter-spacing: -1.3px;
+      margin-bottom: 15px;
     }
 
-    .section-heading p {
+    .section-heading p,
+    .about-box p {
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .about-box {
-      background: linear-gradient(145deg, rgba(29,21,48,.95), rgba(18,12,31,.95));
+      padding: 27px;
+      background: linear-gradient(145deg, rgba(29,21,48,.94), rgba(18,12,31,.94));
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
+      border-radius: 17px;
     }
 
-    .about-box p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .about-box p:last-child {
-      margin-bottom: 0;
+    .about-box p + p {
+      margin-top: 16px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 17px;
     }
 
     .card {
-      background: linear-gradient(145deg, rgba(29,21,48,.9), rgba(16,11,28,.9));
+      padding: 23px;
+      background: linear-gradient(145deg, rgba(29,21,48,.92), rgba(16,11,28,.92));
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 25px;
-      transition: transform .25s, border-color .25s;
+      border-radius: 16px;
+      transition: transform .2s, border-color .2s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(232,121,249,.6);
+      transform: translateY(-4px);
+      border-color: rgba(232,121,249,.55);
     }
 
-    .card-icon {
-      width: 48px;
-      height: 48px;
+    .icon {
+      width: 44px;
+      height: 44px;
       display: grid;
       place-items: center;
       background: rgba(168,85,247,.12);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      font-size: 22px;
-      margin-bottom: 20px;
+      border-radius: 12px;
+      font-size: 20px;
+      margin-bottom: 18px;
     }
 
     .card h3 {
-      font-size: 19px;
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 11px;
     }
 
     .card p {
@@ -372,139 +334,117 @@
       font-size: 13px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 24px;
-    }
-
-    .tag {
-      border: 1px solid var(--border);
-      background: rgba(168,85,247,.07);
-      color: #e9d5ff;
-      border-radius: 8px;
-      padding: 7px 11px;
-      font-size: 12px;
-    }
-
-    .project-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 290px;
-    }
-
-    .project-type {
+    .project-label {
       color: var(--pink);
-      text-transform: uppercase;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 1.5px;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     .project-card h3 {
-      font-size: 22px;
-      margin-bottom: 14px;
+      font-size: 20px;
     }
 
     .project-card p {
-      margin-bottom: 22px;
+      margin-bottom: 16px;
     }
 
     .project-footer {
-      margin-top: auto;
-      padding-top: 15px;
       border-top: 1px solid var(--border);
+      padding-top: 13px;
       color: #d8b4fe;
-      font-size: 12px;
+      font-size: 11px;
     }
 
-    .contact-panel {
+    .contact-box {
+      padding: 42px 30px;
       text-align: center;
-      padding: 55px 35px;
-      border: 1px solid rgba(192,132,252,.3);
-      border-radius: 25px;
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(147,51,234,.18), transparent 60%),
-        var(--panel);
+      border: 1px solid rgba(192,132,252,.28);
+      border-radius: 22px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(147,51,234,.15), transparent 65%), var(--panel);
     }
 
-    .contact-panel h2 {
-      font-size: clamp(32px, 5vw, 48px);
-      letter-spacing: -1.5px;
-      margin-bottom: 18px;
+    .contact-box h2 {
+      font-size: clamp(31px, 5vw, 45px);
+      letter-spacing: -1px;
+      margin-bottom: 15px;
     }
 
-    .contact-panel p {
-      max-width: 570px;
+    .contact-box > p {
+      max-width: 600px;
       color: var(--muted);
-      margin: 0 auto 28px;
+      font-size: 14px;
+      margin: 0 auto 25px;
+    }
+
+    .contact-buttons {
+      justify-content: center;
     }
 
     .social-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 35px;
+      gap: 13px;
+      margin-top: 30px;
       text-align: left;
     }
 
-    .social-item {
+    .social-card {
+      padding: 17px;
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
       background: rgba(11,7,21,.55);
+      border-radius: 12px;
       min-width: 0;
     }
 
-    .social-item strong {
-      display: block;
+    .social-card h3 {
+      font-size: 15px;
       margin-bottom: 5px;
     }
 
-    .social-item span {
+    .handle {
       color: var(--muted);
       font-size: 12px;
       overflow-wrap: anywhere;
     }
 
-    .social-item a {
+    .social-link {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 11px;
       color: #e9b8ff;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    .social-item a:hover {
+    .social-link:hover {
       text-decoration: underline;
     }
 
     .discord-note {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 17px;
+      margin-top: 16px !important;
+      font-size: 11px !important;
     }
 
-    .footer {
+    footer {
+      padding: 24px 0;
       border-top: 1px solid var(--border);
-      padding: 25px 0;
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .footer p {
-      color: #9185a5;
-      font-size: 12px;
+    .footer-inner p {
+      color: #9386a8;
+      font-size: 11px;
     }
 
-    .footer a {
+    .footer-inner a {
       color: #d8b4fe;
       font-size: 12px;
     }
@@ -512,13 +452,11 @@
     @media (max-width: 800px) {
       .hero {
         grid-template-columns: 1fr;
-        gap: 35px;
-        min-height: auto;
-        padding-top: 65px;
+        gap: 32px;
       }
 
       .profile-card {
-        max-width: 520px;
+        max-width: 530px;
       }
 
       .grid {
@@ -526,38 +464,38 @@
       }
 
       .nav-links {
-        gap: 12px;
+        gap: 13px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 13px 0;
+        gap: 10px;
+      }
+
+      .nav-links {
+        width: 100%;
+        gap: 15px;
       }
 
       .nav-links a {
         font-size: 12px;
       }
-    }
 
-    @media (max-width: 560px) {
-      .container {
-        width: 90%;
-      }
-
-      .nav-inner {
-        min-height: 68px;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 15px 0;
-        gap: 12px;
-      }
-
-      .nav-links {
-        width: 100%;
-        gap: 16px;
-      }
-
-      .nav-cta {
+      .nav-links .nav-button {
         display: none;
       }
 
+      .hero {
+        padding-top: 55px;
+        padding-bottom: 60px;
+      }
+
       h1 {
-        letter-spacing: -2px;
+        letter-spacing: -1.8px;
       }
 
       .grid,
@@ -566,20 +504,16 @@
       }
 
       .section {
-        padding: 70px 0;
+        padding: 65px 0;
       }
 
-      .about-box,
-      .profile-card {
-        padding: 24px;
+      .contact-box {
+        padding: 32px 18px;
       }
 
-      .contact-panel {
-        padding: 38px 20px;
-      }
-
-      .button-row .button {
-        flex: 1 1 auto;
+      .profile-card,
+      .about-box {
+        padding: 22px;
       }
     }
 
@@ -588,7 +522,7 @@
         scroll-behavior: auto;
       }
 
-      *, *::before, *::after {
+      * {
         transition-duration: .01ms !important;
       }
     }
@@ -599,14 +533,14 @@
 
   <header class="navbar">
     <div class="container nav-inner">
-      <a class="logo" href="#home">Sadiq<span>ctr</span>.</a>
+      <a class="logo" href="#home">Web3<span> Portfolio</span></a>
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact">Let's Connect ↗</a>
+        <a class="nav-button" href="https://t.me/sadiqctr">Contact Me ↗</a>
       </nav>
     </div>
   </header>
@@ -615,64 +549,71 @@
 
     <section class="container hero" id="home">
       <div>
-        <div class="eyebrow">
-          <span class="dot"></span>
+        <div class="badge">
+          <span class="badge-dot"></span>
           OPEN TO REMOTE OPPORTUNITIES
         </div>
 
         <h1>
-          Building better
-          <span class="gradient-text">Web3</span>
-          communities.
+          Strong communities start with
+          <span class="gradient">people who care.</span>
         </h1>
 
-        <p class="hero-description">
-          Hey, I'm Sadiqctr — an aspiring Web3 community moderator
-          focused on Telegram and Discord. I'm interested in helping
-          communities stay organized, welcoming, safe, and engaged.
+        <p class="hero-text">
+          I'm a Web3 community moderator focused on creating a welcoming,
+          organized, and trustworthy experience for members. I believe
+          good moderation is more than enforcing rules: it means listening,
+          communicating clearly, protecting the community, and helping
+          people feel confident enough to participate.
         </p>
 
         <div class="button-row">
-          <a class="button button-primary" href="#contact">
-            Contact Me ↗
+          <a class="button primary"
+             href="https://t.me/sadiqctr"
+             target="_blank"
+             rel="noopener noreferrer">
+            Contact Me on Telegram ↗
           </a>
 
-          <a class="button button-secondary" href="#portfolio">
-            Explore My Portfolio
+          <a class="button secondary"
+             href="https://x.com/sadiqctr"
+             target="_blank"
+             rel="noopener noreferrer">
+            Follow Me on X ↗
           </a>
         </div>
 
         <p class="hero-note">
-          Community support · Moderation · Web3
+          Telegram moderation · Discord support · Member engagement · Community safety
         </p>
       </div>
 
       <aside class="profile-card">
-        <div class="avatar">SC</div>
+        <div class="profile-symbol">W3</div>
 
-        <h2>Sadiqctr</h2>
+        <h2>Community First.</h2>
         <p class="profile-role">Web3 Community Moderator</p>
 
-        <hr class="profile-divider">
+        <hr class="divider">
 
         <div class="profile-line">
-          <span>Primary platforms</span>
+          <span>Platforms</span>
           <span>Telegram & Discord</span>
         </div>
 
         <div class="profile-line">
-          <span>Work preference</span>
-          <span>Remote</span>
+          <span>Work style</span>
+          <span>Remote & Collaborative</span>
         </div>
 
         <div class="profile-line">
-          <span>Focus</span>
-          <span>Community & Safety</span>
+          <span>Priority</span>
+          <span>Safety & Trust</span>
         </div>
 
         <div class="profile-line">
-          <span>Handle</span>
-          <span>@Sadiqctr</span>
+          <span>Approach</span>
+          <span>Calm & Consistent</span>
         </div>
       </aside>
     </section>
@@ -680,29 +621,41 @@
     <section class="section" id="about">
       <div class="container">
         <div class="section-heading">
-          <div class="section-label">01 / About Me</div>
-          <h2>Communities work better when people feel welcome.</h2>
+          <div class="section-label">01 / ABOUT</div>
+          <h2>More than moderation. It's about trust.</h2>
           <p>
-            A little about my approach to community management and
-            the kind of work I want to contribute to.
+            A community is built by the people in it. The way they are
+            welcomed, heard, and treated makes a real difference.
           </p>
         </div>
 
         <div class="about-box">
           <p>
-            I'm building my path in Web3 community management, with a
-            focus on Telegram and Discord communities.
+            My interest in Web3 community management comes from understanding
+            how much a strong community matters to a project's growth.
+            Behind every active group are people looking for answers,
+            sharing ideas, learning about a project, or trying to find
+            their place in a new ecosystem.
           </p>
 
           <p>
-            I understand the importance of clear communication,
-            respectful member support, following community rules,
-            and helping keep discussions organized.
+            I believe a good moderator should be approachable without losing
+            professionalism, firm about community rules without being
+            disrespectful, and attentive enough to recognize when a
+            conversation needs guidance or an issue needs to be escalated.
           </p>
 
           <p>
-            I'm looking for opportunities to learn, contribute to a
-            team, and grow through practical community work.
+            I want to contribute to communities where communication is clear,
+            members are treated fairly, and safety is taken seriously.
+            I'm committed to learning each project's guidelines, understanding
+            its culture, working with the team, and handling responsibilities
+            with care and consistency.
+          </p>
+
+          <p>
+            My goal is to keep growing in Web3, contribute meaningful work,
+            and help teams build communities that people are proud to be part of.
           </p>
         </div>
       </div>
@@ -711,77 +664,94 @@
     <section class="section" id="skills">
       <div class="container">
         <div class="section-heading">
-          <div class="section-label">02 / Skills</div>
-          <h2>How I can support a community.</h2>
+          <div class="section-label">02 / SKILLS</div>
+          <h2>The work behind a healthy community.</h2>
           <p>
-            Core areas I am focused on developing for Web3 community
-            moderation and support.
+            Effective community management takes patience, sound judgment,
+            clear communication, and a willingness to help. These are the
+            areas I focus on in my approach to the role.
           </p>
         </div>
 
         <div class="grid">
+
           <article class="card">
-            <div class="card-icon">✦</div>
+            <div class="icon">✦</div>
             <h3>Telegram Moderation</h3>
             <p>
-              Helping maintain organized discussions, guide members,
-              and support a respectful community environment.
+              A busy Telegram group needs more than someone who watches
+              messages. It needs a moderator who pays attention, helps
+              members find reliable information, applies the rules fairly,
+              and knows when to step in. I focus on keeping conversations
+              organized, addressing disruptive behaviour appropriately,
+              and making newcomers feel welcome.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">◈</div>
-            <h3>Discord Support</h3>
+            <div class="icon">◈</div>
+            <h3>Discord Community Support</h3>
             <p>
-              Helping members navigate channels, understand rules,
-              and find the right information.
+              Discord communities can have many channels, discussions,
+              and different member needs. I value giving clear directions,
+              helping people find the right channel, answering questions
+              patiently, and keeping communication respectful. I also
+              understand the importance of following server rules and
+              working with other moderators rather than acting alone.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">⌘</div>
+            <div class="icon">⌘</div>
             <h3>Community Safety</h3>
             <p>
-              Recognizing suspicious messages, reporting potential
-              scams, and following established moderation rules.
+              Trust can be damaged quickly when suspicious links, spam,
+              impersonation, or misleading messages go unchecked. I take
+              a careful approach to identifying concerns, following the
+              project's security and moderation procedures, and alerting
+              the appropriate team. Protecting members means acting
+              responsibly instead of making assumptions or promises.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">◎</div>
+            <div class="icon">◎</div>
             <h3>Member Engagement</h3>
             <p>
-              Encouraging helpful conversations and welcoming new
-              members into a community.
+              A healthy community gives people a reason to participate.
+              I believe in welcoming new members, encouraging constructive
+              discussion, responding thoughtfully, and helping members
+              feel that their questions matter. Engagement should feel
+              genuine, not forced, and should reflect the project's
+              culture and values.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">↗</div>
-            <h3>Communication</h3>
+            <div class="icon">↗</div>
+            <h3>Communication & Conflict Handling</h3>
             <p>
-              Sharing clear information, responding respectfully,
-              and escalating issues when needed.
+              Moderators often deal with confusion, frustration, and
+              disagreements. I value staying calm, listening before
+              responding, explaining decisions clearly, and treating
+              people with respect. When a problem requires more authority
+              or expertise, I believe in escalating it to the right person
+              instead of allowing it to become a bigger issue.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">◇</div>
-            <h3>Web3 Learning</h3>
+            <div class="icon">◇</div>
+            <h3>Commitment & Teamwork</h3>
             <p>
-              Developing my understanding of blockchain projects,
-              community culture, and decentralized ecosystems.
+              Reliable community support comes from consistency. I aim to
+              learn the team's expectations, follow instructions, communicate
+              when something needs attention, and remain open to feedback.
+              I'm committed to developing my skills, learning each project's
+              community culture, and becoming someone the team can depend on.
             </p>
           </article>
-        </div>
 
-        <div class="tags" aria-label="Areas of focus">
-          <span class="tag">Telegram</span>
-          <span class="tag">Discord</span>
-          <span class="tag">Web3</span>
-          <span class="tag">Community Support</span>
-          <span class="tag">Moderation</span>
-          <span class="tag">Remote Work</span>
         </div>
       </div>
     </section>
@@ -789,149 +759,25 @@
     <section class="section" id="portfolio">
       <div class="container">
         <div class="section-heading">
-          <div class="section-label">03 / Portfolio</div>
-          <h2>How I approach moderation.</h2>
+          <div class="section-label">03 / PRACTICAL APPROACH</div>
+          <h2>How I would handle real community situations.</h2>
           <p>
-            Example scenarios demonstrating how I would approach
-            common community situations. These are sample exercises,
-            not claims of previous client work.
+            These sample scenarios show the care and judgment I would bring
+            to common moderation tasks. They are examples of my approach,
+            not claims of previous client projects.
           </p>
         </div>
 
         <div class="grid">
-          <article class="card project-card">
-            <div class="project-type">Sample Scenario 01</div>
-            <h3>Handling suspicious links</h3>
-            <p>
-              A member posts a suspicious link. I would follow the
-              community's moderation policy, restrict or report the
-              content where authorized, and alert the appropriate team.
-            </p>
-            <div class="project-footer">
-              Focus: Community safety
-            </div>
-          </article>
 
           <article class="card project-card">
-            <div class="project-type">Sample Scenario 02</div>
-            <h3>Welcoming new members</h3>
+            <div class="project-label">SCENARIO 01</div>
+            <h3>Responding to suspicious activity</h3>
             <p>
-              A new member joins and asks how the community works.
-              I would direct them to the rules, useful resources,
-              and the correct channels for their questions.
+              If a suspicious link or possible impersonation appeared,
+              I would follow the team's security procedures, report or
+              restrict the content when authorized, and alert the relevant
+              team member. I would prioritize member safety and avoid
+              presenting unverified claims as facts.
             </p>
             <div class="project-footer">
-              Focus: Member onboarding
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <div class="project-type">Sample Scenario 03</div>
-            <h3>Resolving a disagreement</h3>
-            <p>
-              A discussion becomes heated. I would stay neutral,
-              refer to the community guidelines, and escalate the
-              issue when it exceeds my authority.
-            </p>
-            <div class="project-footer">
-              Focus: Conflict management
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-panel">
-          <div class="section-label">04 / Get In Touch</div>
-
-          <h2>
-            Let's build something
-            <span class="gradient-text">together.</span>
-          </h2>
-
-          <p>
-            Looking for a community moderator or support team member?
-            Connect with me through my social profiles to discuss
-            remote opportunities and collaborations.
-          </p>
-
-          <div class="button-row" style="justify-content:center">
-            <a class="button button-primary"
-               href="https://t.me/sadiqctr"
-               target="_blank"
-               rel="noopener noreferrer">
-              Message on Telegram ↗
-            </a>
-
-            <a class="button button-secondary"
-               href="https://x.com/sadiqctr"
-               target="_blank"
-               rel="noopener noreferrer">
-              Follow on X ↗
-            </a>
-          </div>
-
-          <div class="social-grid">
-            <div class="social-item">
-              <strong>Telegram</strong>
-              <span>@Sadiqctr</span>
-              <a href="https://t.me/sadiqctr"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                Open Telegram ↗
-              </a>
-            </div>
-
-            <div class="social-item">
-              <strong>X / Twitter</strong>
-              <span>@Sadiqctr</span>
-              <a href="https://x.com/sadiqctr"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                Visit profile ↗
-              </a>
-            </div>
-
-            <div class="social-item">
-              <strong>Discord</strong>
-              <span id="discord-handle">Sadiqctr</span>
-              <a href="https://discord.com/app"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                Open Discord ↗
-              </a>
-            </div>
-          </div>
-
-          <p class="discord-note">
-            Discord note: Open Discord and search for Sadiqctr.
-            If your account has a different exact username or a
-            custom profile link, update it here to make contact easier.
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a class="logo" href="#home">Sadiq<span>ctr</span>.</a>
-
-      <p>
-        © <span id="year">2026</span> Sadiqctr. Built for the Web3 journey.
-      </p>
-
-      <a href="#home">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
-
-</body>
-</html>
